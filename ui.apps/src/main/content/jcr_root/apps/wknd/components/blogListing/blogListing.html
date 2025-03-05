@@ -1,0 +1,81 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-test.hasContent="${properties.title || properties.subtitle}" />
+<sly data-sly-call="${templates.placeholder @ isEmpty=!hasContent}" />
+
+<div class="explore-blogs">
+    <h1 class="title">${properties.title}</h1>
+    <p class="subtitle">${properties.subtitle}</p>
+
+    <button class="load-more">${properties.viewMoreLabel}</button>
+    <div class="container-fluid">
+
+        <!-- navbar -->
+        <nav class="navbar">
+            <div class="container-fluid justify-content-center">
+                <a class="navbar-brand " href="#">
+                    <b>SanProducts</b>
+                </a>
+            </div>
+        </nav>
+
+        <!-- search -->
+
+        <div class="container">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" id="search" placeholder="Search" aria-label="Search">
+            </form>
+        </div>
+
+        <!-- cards -->
+
+        <div class="row justify-content-center" id="cards-container"></div>
+        <template id="card-template">
+            <div class="col-lg-3 col-md-4 col-sm-6 m-3 mb-sm-0">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="image-container">
+                            <img class="card-image" src="" alt="spices">
+                            <span class="icon-container">
+                                <svg class="download-icon">
+                                    <use href="" />
+                                </svg>
+                                <svg class="share-icon">
+                                    <use href="" />
+                                </svg>
+                            </span>
+                            <p class="card-text category"></p>
+
+                        </div>
+
+                        <div class="card-data">
+                            <h5 class="card-title title"></h5>
+                            <p class="card-text description"></p>
+
+                            <div class="card-data_more">
+                                <a href="#" class="read-more" id="read-more-link">READ NOW</a>
+                                <svg class="arrow-icon">
+                                    <use href="" />
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </template>
+
+        <!-- pagination -->
+        <ul class="pagination justify-content-center">
+
+            <button id="load-more">Load More</button>
+
+
+
+        </ul>
+
+    </div>
+
+
+
+</div>
