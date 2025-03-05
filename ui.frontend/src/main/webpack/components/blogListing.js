@@ -31,7 +31,7 @@ function createUserCard(user) {
   imageElement.src = user.images[0];  
   
   card.querySelector(".card-title").textContent = user.title;
-  card.querySelector(".category").textContent = user.category;
+  card.querySelector(".category").textContent = user.category.charAt(0).toUpperCase()+ user.category.slice(1).toLowerCase();
   card.querySelector(".description").textContent = user.description;
 
   const spritePath = "/apps/wknd/clientlibs/clientlib-site/resources/images/sprite/sprite.svg";
