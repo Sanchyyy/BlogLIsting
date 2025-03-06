@@ -9,11 +9,14 @@
     <link rel="stylesheet" href="/etc.clientlibs/wknd/clientlibs/clientlib-base.css" type="text/css">
     <script type="text/javascript" src="/etc.clientlibs/wknd/clientlibs/clientlib-dependencies.js"></script>
     <link rel="stylesheet" href="/etc.clientlibs/wknd/clientlibs/clientlib-dependencies.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body class="page basicpage">
 
-    <div class="root container responsivegrid">
+    <!-- <div class="root container responsivegrid">
     <div class="cmp-container">
         <header class="experiencefragment">
             <div class="cmp-experiencefragment">
@@ -119,7 +122,76 @@ This is instance: 78f60b4a-a52a-4021-82d5-fb17f5fb95cf
             </div>
         </footer>
     </div>
+</div> -->
+<div class="container-fluid">
+
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="container-fluid justify-content-center">
+            <a class="navbar-brand " href="#">
+                <b>SanProducts</b>
+            </a>
+        </div>
+    </nav>
+
+    <!-- search -->
+
+    <div class="container">
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" id="search" placeholder="Search" aria-label="Search">
+        </form>
+    </div>
+
+    <!-- cards -->
+
+    <div class="row justify-content-center" id="cards-container"></div>
+    <template id="card-template">
+        <div class="col-lg-3 col-md-4 col-sm-6 m-3 mb-sm-0">
+            <div class="card">
+                <div class="card-body">
+                    <div class="image-container">
+                        <img class="card-image" src="" alt="spices">
+                        <span class="icon-container">
+                            <svg class="download-icon">
+                                <use href="" />
+                            </svg>
+                            <svg class="share-icon">
+                                <use href="" />
+                            </svg>
+                        </span>
+                        <p class="card-text category"></p>
+
+                    </div>
+
+                    <div class="card-data">
+                        <h5 class="card-title title"></h5>
+                        <p class="card-text description"></p>
+
+                        <div class="card-data_more">
+                            <a href="#" class="read-more" id="read-more-link">READ NOW</a>
+                            <svg class="arrow-icon">
+                                <use href="" />
+                            </svg>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </template>
+
+    <!-- pagination -->
+    <ul class="pagination justify-content-center">
+
+        <button id="load-more">Load More</button>
+
+
+
+    </ul>
+
 </div>
+
     <script type="text/javascript" src="/etc.clientlibs/wknd/clientlibs/clientlib-site.js"></script>
     <script type="text/javascript" src="/etc.clientlibs/wknd/clientlibs/clientlib-base.js"></script>
 </body>

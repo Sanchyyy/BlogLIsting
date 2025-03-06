@@ -2,8 +2,9 @@
 
 
 .container-fluid{
-    background: #efece4;
-    width: 100%;
+    font-family: "Merriweather", serif;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,109,121,1) 17%, rgba(3,181,215,0.4095763305322129) 75%, rgba(0,212,255,1) 100%);    width: 100%;
 
     .card-body{
         border-radius: 0.25rem;
@@ -112,15 +113,20 @@
       }
 
     #load-more{
-        background: rgb(234, 93, 93);
+        background: (118 188 223 / 70%);  
         text-decoration: none;
         font-weight: bold;
         font-size: 18px;
         line-height: 24px;
         cursor: pointer;
         padding: 12px 32px; 
-        margin-top: 24px; 
+        margin: 24px auto; 
         border-radius: 20px;
+
+        &:hover{
+            background: black;
+            color: #fff;
+        }
     }
     .arrow-icon{
         height: 20px;
